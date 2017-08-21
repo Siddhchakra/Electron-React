@@ -1,11 +1,12 @@
 import * as React from 'react';
 
 interface TextBoxProps {
-  text: string;
+  type: string,
+  className: string
 };
 
 export default class TextBox extends React.Component<TextBoxProps, {}> {
   render() {
-    return <input type="text" />;
+    return <input type={this.props.type} className={this.props.className}/>;
   }
 };

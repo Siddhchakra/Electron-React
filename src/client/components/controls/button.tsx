@@ -2,7 +2,7 @@ import * as React from 'react';
 
 interface ButtonProps {
   buttonDisabled: boolean,
-  buttonClick: Function,
+  buttonClick: any,
   buttonLabel: any,
   buttonValue: any
 };
@@ -10,7 +10,9 @@ interface ButtonProps {
 export class Button extends React.Component<ButtonProps, {}> {
   render() {
     return <div>
-      <button disabled={this.props.buttonDisabled} value={this.props.buttonValue} onClick={this.props.buttonClick}>{this.props.buttonLabel}</button>
+      <button disabled={this.props.buttonDisabled} value={this.props.buttonValue} onClick={this.props.buttonClick}>
+        {this.props.buttonLabel}
+      </button>
     </div>;
   }
 };
